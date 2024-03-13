@@ -1,0 +1,280 @@
+/* variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%);
+  background-attachment: fixed;
+}
+
+nav {
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #96b0bc;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+nav ul a {
+  all: unset;
+  transition: 0.3s ease;
+}
+nav ul a:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.section {
+  display: flex;
+  height: 400px;
+}
+.section .aboutMe {
+  background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+}
+.section .aboutMe h2 {
+  font-size: 50px;
+}
+.section .aboutMe p {
+  text-align: center;
+  font-size: 25px;
+  width: 450px;
+}
+.section figure {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.section figure .profilePicture {
+  width: 400px;
+  border-radius: 50%;
+  opacity: 85%;
+}
+.section .experience {
+  background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+}
+.section .experience h2 {
+  font-size: 50px;
+}
+.section table,
+.section th,
+.section td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-color: #96b0bc;
+  padding: 3px;
+}
+.section table {
+  width: 70%;
+  text-align: center;
+}
+.section table tr:nth-child(even) {
+  background-color: rgba(0, 0, 255, 0.35);
+}
+.section table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
+.section table tbody tr {
+  transition: 0.4s ease;
+}
+.section video {
+  flex: 1;
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section .education {
+  background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+}
+.section .education h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.section .education ul {
+  font-size: 22px;
+}
+.section .education ul li {
+  margin-bottom: 10px;
+}
+.section .skillsLanguage {
+  background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+}
+.section .skillsLanguage h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.section .skillsLanguage .container {
+  display: flex;
+}
+.section .skillsLanguage .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 20px 20px 20px 20px;
+  margin-right: 20px;
+}
+.section .skillsLanguage .card ul {
+  list-style: none;
+}
+.section .skillsLanguage .card ul li {
+  display: flex;
+  width: 195px;
+  margin-bottom: 20px;
+}
+.section .skillsLanguage .card ul li .stars {
+  flex: 1;
+  text-align: end;
+}
+.section .skillsLanguage .card ul li .language {
+  flex: 0.5;
+}
+.section .skillsLanguage .skills {
+  align-items: center;
+  display: flex;
+}
+.section .skillsLanguage .skills .fa-brands {
+  margin-right: 5px;
+}
+.section .skillsLanguage .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  padding: 50px;
+  background-color: rgb(40, 39, 41);
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+footer p {
+  color: white;
+}
+footer .fa-linkedin {
+  color: rgb(0, 0, 0);
+  margin-right: 5px;
+}
+footer .fa-envelope {
+  color: rgb(0, 0, 0);
+  margin-right: 5px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  margin-left: 5px;
+}
+footer a:hover {
+  color: grey;
+  transition: ease 0.3s;
+}
+
+@media only screen and (max-width: 1170px) {
+  .section {
+    flex-direction: column;
+    height: auto;
+  }
+  .section .aboutMe,
+  .section .experience,
+  .section .education,
+  .section .skillsLanguage {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .section .aboutMe h2,
+  .section .experience h2,
+  .section .education h2,
+  .section .skillsLanguage h2 {
+    font-size: 35px;
+  }
+  .section .aboutMe p,
+  .section .experience p,
+  .section .education p,
+  .section .skillsLanguage p {
+    font-size: 20px;
+    width: 350px;
+  }
+  .section .skillsLanguage .container {
+    flex-direction: column;
+  }
+  .section .skillsLanguage .container .card {
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+  .section figure {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .section figure .profilePicture {
+    width: 250px;
+  }
+  nav {
+    font-size: 18px;
+  }
+  .aboutMe,
+  .experience,
+  .education,
+  .skillsLanguage {
+    width: 100%;
+  }
+  .aboutMe h1,
+  .experience h1,
+  .education h1,
+  .skillsLanguage h1 {
+    font-size: 20px;
+  }
+  .card {
+    margin-right: 0;
+    flex-direction: column;
+  }
+  table {
+    width: 70%;
+    text-align: center;
+  }
+  .profilePicture {
+    width: 100%;
+  }
+  h1 {
+    font-size: 10px;
+  }
+  .programming {
+    height: 200px;
+  }
+  .educationPng {
+    height: 200px;
+  }
+}/*# sourceMappingURL=style.css.map */
